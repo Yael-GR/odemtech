@@ -7,13 +7,22 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <div id="btn-container">
-        <button class="red points-1">Add 1 point</button>
-        <button class="blue points-1">Add 1 point</button>
+        <div id="red-container"> <!--buttons for changing red team's score-->
+            <button class="red points-plus-1">הגיע לצד השני של המגרש</button>
+            <button class="red points-plus-1">כדור בקדמת המגרש</button>
+            <button class="red points-minus-3">קנס - הוציאו משהו מהמגרש</button>
+        </div>
+        <div id="blue-container"> <!--buttons for changing blue team's score-->
+            <button class="blue points-plus-1">הגיע לצד השני של המגרש</button>
+            <button class="blue points-plus-1">כדור בקדמת המגרש</button>
+            <button class="blue points-minus-3">קנס - הוציאו משהו מהמגרש</button>
+        </div>
     </div>
 
-    <div id="score-container">
+    <div id="score-container"> <!--show current score-->
         <p class="red">Red team's score: 0</p>
         <p class="blue">Blue team's score: 0</p>
     </div>
