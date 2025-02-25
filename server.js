@@ -33,14 +33,13 @@ app.post("/api/submit", (req, res) => {
         if (client.readyState === WebSocket.OPEN) {
             client.send(JSON.stringify({ event: "jsonReceived", data: req.body }));
         }
-});
+    });
 
     // Respond back to ESP32
     res.json({ status: "success", message: "Data received!" });
 });
 
 // Start server
-// app.listen(port, "0.0.0.0", () => console.log(`Server running on port ${port}`));
 server.listen(4000, "0.0.0.0", () => {
     console.log("WebSocket server is listening on ws://0.0.0.0:4000");
 });
