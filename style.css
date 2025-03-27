@@ -1,8 +1,96 @@
-button.red {
-    background-color: rgb(255, 137, 137);
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff5e5; /* Static cream color background */
+    text-align: center;
+    margin: 0;
+    padding: 40px;
 }
 
-button.blue {
-    background-color: rgb(137, 178, 255);
+/* Button container layout */
+#btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 20px;
 }
 
+/* Red and Blue team containers */
+#red-container, #blue-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+#red-container {
+    background-color: #ffcccc;
+    border: 2px solid #ff6666;
+}
+
+#blue-container {
+    background-color: #cce5ff;
+    border: 2px solid #6699ff;
+}
+
+/* Button styles */
+button {
+    font-size: 16px;
+    padding: 10px;
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.red {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.blue {
+    background-color: #4d79ff;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.points-plus-1 {
+    font-weight: bold;
+}
+
+.points-minus-3 {
+    background-color: #ffcc00;
+    color: black;
+    font-weight: bold;
+}
+
+/* Score container */
+#score-container {
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+#score-container p {
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.red {
+    border: 2px solid #ff0000;
+}
+
+.blue {
+    border: 2px solid #0000ff;
+}

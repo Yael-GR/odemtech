@@ -1,11 +1,12 @@
 let redPoints = 0; // Initialize points
 let bluePoints = 0;
 
-const socket = new WebSocket("ws://192.168.1.182:4000");
+const socket = new WebSocket("ws:192.168.1.27:4000");
 
 const btn = document.querySelector("#btn-container"); // Get DOM nodes
-const redPointsDisplay = document.querySelector("p.red")
-const bluePointsDisplay = document.querySelector("p.blue")
+const redPointsDisplay = document.querySelector("span.red-score")
+const bluePointsDisplay = document.querySelector("span.blue-score")
+
 
 socket.onopen = () => {
     console.log("Connected to WebSocket server");
@@ -34,21 +35,21 @@ function changePointsWithButtons (button) {
     if (operationType == "plus") {
         if (team === "red") {
             redPoints += pointsToChange;
-            redPointsDisplay.textContent = `Red team's score: ${redPoints}`;
+            redPointsDisplay.textContent = redPoints;
         }
         else if (team === "blue") {
             bluePoints += pointsToChange;
-            bluePointsDisplay.textContent = `Blue team's score: ${bluePoints}`;
+            bluePointsDisplay.textContent = bluePoints;
         }
     }
     else if (operationType == "minus") {
         if (team === "red") {
             redPoints -= pointsToChange;
-            redPointsDisplay.textContent = `Red team's score: ${redPoints}`;
+            redPointsDisplay.textContent = redPoints;
         }
         else if (team === "blue") {
             bluePoints -= pointsToChange;
-            bluePointsDisplay.textContent = `Blue team's score: ${bluePoints}`;
+            bluePointsDisplay.textContent = bluePoints;
         }
     }
 }
@@ -63,21 +64,21 @@ function changePointsWithJson (data) {
     if (operationType == "plus") {
         if (team === "red") {
             redPoints += pointsToChange;
-            redPointsDisplay.textContent = `Red team's score: ${redPoints}`; // Update score display
+            redPointsDisplay.textContent = redPoints; // Update score display
         }
         else if (team === "blue") {
             bluePoints += pointsToChange;
-            bluePointsDisplay.textContent = `Blue team's score: ${bluePoints}`;
+            bluePointsDisplay.textContent = bluePoints;
         }
     }
     else if (operationType == "minus") {
         if (team === "red") {
             redPoints -= pointsToChange;
-            redPointsDisplay.textContent = `Red team's score: ${redPoints}`;
+            redPointsDisplay.textContent = redPoints;
         }
         else if (team === "blue") {
             bluePoints -= pointsToChange;
-            bluePointsDisplay.textContent = `Blue team's score: ${bluePoints}`;
+            bluePointsDisplay.textContent = bluePoints;
         }
     }
 }

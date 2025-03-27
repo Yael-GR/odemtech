@@ -24,7 +24,7 @@ wss.on("connection", (ws) => {
 
 // Handle POST request from ESP32
 app.post("/api/submit", (req, res) => {
-    console.log("Received data:", req.body); // Log incoming data
+    console.log("Received data: ", req.body); // Log incoming data
     const { points, operation, team } = req.body;
     console.log(`Points: ${points}, Operation: ${operation}, Team: ${team}`);
 
@@ -40,6 +40,6 @@ app.post("/api/submit", (req, res) => {
 });
 
 // Start server
-server.listen(4000, "0.0.0.0", () => {
-    console.log("WebSocket server is listening on ws://0.0.0.0:4000");
+server.listen(port, "0.0.0.0", () => {
+    console.log(`WebSocket server is listening on ws://0.0.0.0:${port}`);
 });
