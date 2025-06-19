@@ -104,17 +104,3 @@ function getPointsOperation (button) {
 }
 
 
-
-function simulateJsonReception() {
-    // Simulating receiving a JSON object from the ESP32
-    const jsonData = {
-        points: 5,
-        operation: "plus",
-        team: "blue"
-    };
-
-    // Call the function to change points based on the JSON data
-    changePointsWithJson(jsonData);
-}
-
-// setInterval(simulateJsonReception, 5000);

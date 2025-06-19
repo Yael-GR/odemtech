@@ -4,7 +4,7 @@ body {
     background-color: #fff5e5; /* Static cream color background */
     text-align: center;
     margin: 0;
-    padding: 40px;
+    padding: 100px;
 }
 
 /* Button container layout */
@@ -12,7 +12,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
 }
 
 /* Red and Blue team containers */
@@ -27,13 +27,13 @@ body {
 }
 
 #red-container {
-    background-color: #ffcccc;
-    border: 2px solid #ff6666;
+    background-color: #cccccc;
+    border: 2px solid #191919;
 }
 
 #blue-container {
-    background-color: #cce5ff;
-    border: 2px solid #6699ff;
+    background-color: #b4d3b2;
+    border: 2px solid #27592d;
 }
 
 /* Button styles */
@@ -48,12 +48,12 @@ button {
 }
 
 .red {
-    background-color: #ff4d4d;
+    background-color: #191919;
     color: white;
 }
 
 .blue {
-    background-color: #4d79ff;
+    background-color: #27592d;
     color: white;
 }
 
@@ -61,13 +61,7 @@ button:hover {
     opacity: 0.8;
 }
 
-.points-plus-1 {
-    font-weight: bold;
-}
-
-.points-minus-3 {
-    background-color: #ffcc00;
-    color: black;
+.points-plus-1, .points-plus-3, .points-plus-5, .points-plus-10 {
     font-weight: bold;
 }
 
@@ -88,9 +82,9 @@ button:hover {
 }
 
 .red {
-    border: 2px solid #ff0000;
+    border: 2px solid #191919;
 }
 
 .blue {
-    border: 2px solid #0000ff;
+    border: 2px solid #27592d;
 }
